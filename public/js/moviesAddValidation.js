@@ -85,7 +85,11 @@ window.onload = function () {
                 errores.innerHTML += "<li>" + elemento + "</li>"
                 errores.style.color = "red"
                 errores.style.fontSize = "16px"
+                errores.classList.add("alert-warning")
             })
+        }
+        else{
+            alert("La pelicula se guardó satisfactoriamente")
         }
     })
 
@@ -188,7 +192,9 @@ window.onload = function () {
             })
         }
 
-        duracion.addEventListener("blur", (e) => {
+     
+    })  
+     duracion.addEventListener("blur", (e) => {
             let erroresArray = []
             errores.innerHTML = ""
             if (duracion.value == "") {
@@ -216,7 +222,6 @@ window.onload = function () {
                 })
             }
         })
-    })
 
 
     /*● El formulario contará con validaciones especiales para los siguientes campos:
