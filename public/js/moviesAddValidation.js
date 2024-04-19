@@ -204,7 +204,7 @@ window.onload = function () {
                 duracion.classList.add("is-invalid")
             }  
             
-            else if (duracion.value < 0 || duracion.value > 10) {
+            else if (duracion.value < 60 || duracion.value > 360) {
                 erroresArray.push("La duracion debe ser entre 60 y 360 minutos ")
                 duracion.classList.add("is-invalid")
             }
@@ -224,17 +224,7 @@ window.onload = function () {
         })
 
 
-    /*● El formulario contará con validaciones especiales para los siguientes campos:
-  ○ Calificación y Premios: deberá validar que el valor ingresado esté
-  comprendido entre cero (0) y diez (10).
-  ○ Duración: deberá validar que el valor ingresado esté comprendido entre 60
-  y 360 minutos.
-  
-  ● Si los campos cumplen con los requerimientos exigidos, debemos hacer lo
-  siguiente:
-  ○ A todos los campos input o select se les deberá agregar la clase “is-valid”,
-  como constancia que ese campo pasó la validación. Esta ya se encuentra
-  creada en el archivo: /public/css/style.css.*/
+
 
     duracion.addEventListener("blur", (e) => {
         let erroresArray = []
